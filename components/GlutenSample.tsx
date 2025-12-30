@@ -29,7 +29,7 @@ export default function GlutenSample({ title, bpm, key: keySignature, tempo, aud
           fontWeight: 500,
           color: "var(--text)"
         }}>
-          "{title}"
+          &ldquo;{title}&rdquo;
         </h3>
       </div>
       

@@ -5,9 +5,8 @@
 }
 
 .inner {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: 100%;
+  padding: 0 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,19 +15,26 @@
 .logo {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.1rem;
+  font-weight: 400;
   text-decoration: none;
+  color: var(--text-muted);
+  line-height: 1.1;
 }
 
 .links {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .links a {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  font-weight: 400;
   transition: color 0.2s;
+  line-height: 1.1;
 }
 
 .links a:hover {
