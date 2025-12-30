@@ -30,19 +30,19 @@ export default function Kurt() {
         <p>
         Technology really embraces that. With DAWs, software instruments, and electronic production techniques, you don’t need a massive studio setup to get started.
         That means more room to experiment, try new sounds, collaborate with people from anywhere, and finish records independently. 
-        Obviously there is something in the physicality of analog gear that can’t be replicated digitally, but its astonishing how far digital emulations - like <a href="https://www.fabfilter.com/products/saturn-2-multiband-distortion-saturation-plug-in" target="_blank" rel="noopener noreferrer">FabFilter Saturn 2</a> or Waves CLA compressor - have come, simulating the warmth of tape saturation or the unique character of vintage compressors using mostly signal processing.
+        Obviously there is something in the physicality of analog gear that can’t be replicated digitally, but it&apos;s astonishing how far digital emulations - like <a href="https://www.fabfilter.com/products/saturn-2-multiband-distortion-saturation-plug-in" target="_blank" rel="noopener noreferrer">FabFilter Saturn 2</a> or Waves CLA compressor - have come, simulating the warmth of tape saturation or the unique character of vintage compressors using mostly signal processing.
         </p>
         <p>
           Modern day AI tools have the potential to be another powerful addition to that toolbox - if leaving the creative control in the hands of the user.
-          For me this means more than justing prompting a song with words and getting a finished track back. That’s not how any sorf of art is made.
+          For me this means more than just prompting a song with words and getting a finished track back. That’s not how any sort of art is made.
           The creative process is iterative and the artist needs to be involved in every step of the way. And we see that with attempts like Suno shifting from text-to-audio to a more interactive model where the user can guide the generation process (<a href="https://suno.com/studio-welcome" target="_blank" rel="noopener noreferrer">Suno Studio</a>)
           or AI-first DAWs like <a href="https://mozartai.com/" target="_blank" rel="noopener noreferrer">Mozart AI</a>. 
         </p>
         <p>
-          Personally I think that multimodality will be the most important aspect of AI tools going forward. Being in the middle of making a song and letting a diffusion model generate any instrument that you cant evene play based on a melody you have currently running.
+          Personally I think that multimodality will be the most important aspect of AI tools going forward. Being in the middle of making a song and letting a diffusion model generate any instrument that you can't even play based on a melody you have currently running.
           Or taking cheesy MIDI-melody and turning it into a full fledged violin part with dynamics and expression. As a trained violinist myself I know how much nuance there is in one bow stroke and am amazed how diffusion seems to capture that.
           Or taking a rough mix and let AI mix it inside my DAW and controlling every single plugin such that I can see the changes and can tweak them.
-          Imagine what incredbile work flow that would be.
+          Imagine what incredible workflow that would be.
         </p>
         <p>
           So me and my friend David decided to build Kurt - an AI-powered music production copilot for musicians that integrates directly into popular digital audio workstations (DAWs) like Ableton Live, FL Studio, and Logic Pro.
@@ -53,7 +53,7 @@ export default function Kurt() {
         <h2>Who is Kurt?</h2>
         <p>
          Kurt is designed to assist musicians in the mixing and mastering process by providing intelligent suggestions, automating routine tasks, and enhancing creativity. <br></br>
-         Further more, we finetuned stable audio open on music loops to create samples that let the user stay inside his DAW. It excells on style diversity, BPM and Key adaption and can generate anything from drums to synths.
+         Furthermore, we finetuned stable audio open on music loops to create samples that let the user stay inside his DAW. It excels on style diversity, BPM and Key adaption and can generate anything from drums to synths.
          We call this model Gluten.
         </p>
 
@@ -77,7 +77,7 @@ export default function Kurt() {
 
         <p>
           Kurt is a hybrid project that connects a JUCE audio plugin, MIDI scripts, and a Python + (omni) LLM pipeline to suggest mix moves and apply them back to your session.
-          The idea is simple: record a snippet → analyze it with an multimodal LLM → translate suggestions into plugin parameter changes → apply them in DAW.
+          The idea is simple: record a snippet → analyze it with a multimodal LLM → translate suggestions into plugin parameter changes → apply them in DAW.
         </p>
 
         <p>
@@ -143,7 +143,7 @@ Processing adjustment for index 35, type 'main_level', unit 'db_change', suggest
         </details>
 
         <p>
-          Finally, these values go though a mapping function to convert them into the 0–1 range which the respective DAW uses internally and written into a new MIDI-Script which gets triggered by the JUCE plugin, when the user clicks “Apply”.
+          Finally, these values go through a mapping function to convert them into the 0–1 range which the respective DAW uses internally and written into a new MIDI-Script which gets triggered by the JUCE plugin, when the user clicks “Apply”.
         </p>
         <details style={{ marginBottom: "1.5rem", marginTop: "1rem" }}>
           <summary style={{ cursor: "pointer", fontWeight: 500, marginBottom: "0.5rem" }}>
@@ -207,27 +207,27 @@ Processing adjustment for index 35, type 'main_level', unit 'db_change', suggest
         <h2>On Audio understanding of LLMs</h2>
         <p>
           A key component of Kurt is the use of multimodal LLMs that can understand both audio and text. Current models excel at speech recognition, but music understanding is still in its infancy. Part of the challenge is the high compression and downsampling audio undergoes before being fed into these models, which can strip away important nuances.
-          Since there is no real dataset or evaluation for this task yet, we experimented with several models, including Qwen3-Omni-Instruct, which demonstrated the strongest capabilities in analyzing audio snippets. It also has state-of-the-art perfomance on RUL MuChoMusic (<a href="https://arxiv.org/pdf/2408.01337" target="_blank" rel="noopener noreferrer">Weck et al.</a>), which measures music understanding of LLMs.
+          Since there is no real dataset or evaluation for this task yet, we experimented with several models, including Qwen3-Omni-Instruct, which demonstrated the strongest capabilities in analyzing audio snippets. It also has state-of-the-art performance on RUL MuChoMusic (<a href="https://arxiv.org/pdf/2408.01337" target="_blank" rel="noopener noreferrer">Weck et al.</a>), which measures music understanding of LLMs.
           The key thing we found is that the model needs to be provided full context about the mix - what instruments are used, what plugins are on which track, what the settings of each parameter is and how loud each track is. Without that the model struggles to give actionable feedback. 
           We deduce that most of the power of these models still lies in their text understanding capabilities and knowing that how certain instruments and plugins should be set up instead of pure audio understanding.
         </p>
         <p>
           In order to reach a better understanding of music and mixing, future models will need to be trained on a corpus of high-quality, uncompressed audio data paired with detailed annotations about mixing techniques and outcomes.
           We are working on a “Mixing LLM” trained on such data to further improve Kurt’s capabilities. We scrape data that includes people discussing mixing techniques, tutorials, and breakdowns of popular songs to create a rich training set. 
-          Also people seeking for feedback on their mixens on forums and the answer they get back provide valuable data. This data will be used
+          Also people seeking for feedback on their mixes on forums and the answer they get back provide valuable data. This data will be used
           to fine-tune Qwen Omni 3 to better understand mixing concepts and terminology. 
         </p>
         <p>
-          Another usecase of Kurt is to synthesize training data. An example is cinematic source seperation on which I am writing my thesis right now and hopefully share it soon.
-          By generating synthetic mixes layering vocals, music and sfx with known parameters and outcomes, we can create a controlled dataset to train and evaluate stem-seperation models.
+          Another use case of Kurt is to synthesize training data. An example is cinematic source separation on which I am writing my thesis right now and hopefully share it soon.
+          By generating synthetic mixes layering vocals, music and sfx with known parameters and outcomes, we can create a controlled dataset to train and evaluate stem-separation models.
           We let a LLM “direct” a scene by layering tagged vocals, music and sfx and generate cinematic mixed audio along with the isolated stems, which is mixed by Kurt.
-          This is especially useful since high-quality multitrack recordings are hard to come by due to copyright and licensing issues and current cinematic source seperation datasets are off from real world scenarios.
+          This is especially useful since high-quality multitrack recordings are hard to come by due to copyright and licensing issues and current cinematic source separation datasets are off from real world scenarios.
           # add examples later
         </p>
         <p>
-          This type of generation of training data also holds for music. Assuming our Mixing LLM becomes good enough at analyzing mixes and suggesting improvements, we can use the same approach as in cinematic source seperation to generate synthetic mixes.
-          On these data we can train and evaluate new seperation models and we can synthesize datasets like pre-fx and post-fx stems which are currently not available. Those can be used to train diffusion models that can apply mixing effects in a more controlled manner.
-          Another interesting usecase could be the live music generation where a model generates instrument parts in real-time based on a musicians input and the musician can guide the generation by providing feedback on the mix. Deepmind proposed something similar with their live music model where a user can toggle the stems of a generated track in real-time.
+          This type of generation of training data also holds for music. Assuming our Mixing LLM becomes good enough at analyzing mixes and suggesting improvements, we can use the same approach as in cinematic source separation to generate synthetic mixes.
+          On these data we can train and evaluate new separation models and we can synthesize datasets like pre-fx and post-fx stems which are currently not available. Those can be used to train diffusion models that can apply mixing effects in a more controlled manner.
+          Another interesting use case could be the live music generation where a model generates instrument parts in real-time based on a musicians input and the musician can guide the generation by providing feedback on the mix. Deepmind proposed something similar with their live music model where a user can toggle the stems of a generated track in real-time.
         </p>
         <h2>Introducing Gluten</h2>
         <p>
@@ -266,7 +266,7 @@ Processing adjustment for index 35, type 'main_level', unit 'db_change', suggest
           <p> </p>
         
           This approach is still very limited since MIDI-scripts have limited access to plugin parameters and not all DAWs support them equally well. Which raises the question if traditional DAWs are the right interface for AI-powered music production at all.
-          AI-First DAWs will basically have no constrains on using AI powered tools since they are built around that concept from the ground up. Vector Search on audio, seamless integration of generative models and LLMs and a flexible interface to control AI tools will be essential going forward.
+          AI-First DAWs will basically have no constraints on using AI powered tools since they are built around that concept from the ground up. Vector Search on audio, seamless integration of generative models and LLMs and a flexible interface to control AI tools will be essential going forward.
           <p> 
 
           </p>
