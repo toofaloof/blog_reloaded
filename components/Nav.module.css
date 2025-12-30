@@ -1,0 +1,36 @@
+.nav {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--text);
+}
