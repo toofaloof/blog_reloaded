@@ -5,9 +5,9 @@
 }
 
 .inner {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 15%;
 }
 
 .inner p {

@@ -20,6 +20,29 @@ export default function Home() {
           </li>
         </ul>
       </section>
+
+      <section style={{ marginTop: "2.5rem" }}>
+        <h2>Contact</h2>
+        <ul style={{ listStyle: "none", lineHeight: 2 }}>
+          <li>
+            <a href="mailto:atoofshakir0@gmail.com">Email</a>
+          </li>
+          <li>
+            <a href="https://github.com/toofaloof" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/atoof-shakir"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </section>
     </>
   );
 }

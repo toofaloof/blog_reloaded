@@ -3,7 +3,7 @@ export default function Books() {
     <>
       <h1>Books</h1>
       <p>
-        Please send me book recommendations. My favourite author is Ted Chiang.
+        Please send me book recommendations. My favourite author is Ted Chiang and my favourite director is David Lynch.
       </p>
       <p>Here are some of my favourite non-philosophical books I can recommend warmly:</p>
 
@@ -17,7 +17,6 @@ export default function Books() {
           <li>Brave New World — Aldous Huxley</li>
           <li>The Dark Forest — Liu Cixin</li>
           <li>The Maniac — Benjamín Labatut</li>
-          <li>The Martian — Ridley Scott</li>
           <li>When We Cease To Understand The World — Benjamín Labatut</li>
           <li>Faus — Goethe (I played Mephisto in theatre ;P)</li>
           <li>Foundation and Empire — Isaac Asimov</li>
@@ -26,6 +25,7 @@ export default function Books() {
           <li>Im Westen nichts Neues — Erich Maria Remarque</li>
           <li>The Second Foundation — Isaac Asimov</li>
           <li>The Martian — Andy Weir</li>
+          <li>Exhalation — Ted Chiang</li>
           <li>The Story of Your Life and Others — Ted Chiang</li>
         </ul>
       </section>
