@@ -12,7 +12,11 @@ export default function Kurt() {
         <Link href="/projects">← Back to Projects</Link>
       </p>
 
-      <h1>Kurt</h1>
+      <h1>
+        <a href="https://trykurt.com" target="_blank" rel="noopener noreferrer">
+          Kurt
+        </a>
+      </h1>
       <p style={{ color: "var(--text-muted)" }}>
         On AI in Music Production
       </p>
