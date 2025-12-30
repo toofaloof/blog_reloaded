@@ -275,7 +275,7 @@ Processing adjustment for index 35, type 'main_level', unit 'db_change', suggest
 
         <h2>What&apos;s Next?</h2>
         <p>
-          Kurt is still in its early stages, and there are many exciting directions for future development. Don&apos;t hesitate to reach out if you&apos;re interested.
+          Kurt is still in its early stages, and there are many exciting directions for future development. Don&apos;t hesitate to reach out if have inputs!
         </p>
         <p style={{ marginTop: "2rem" }}>
           <a href="https://trykurt.com" target="_blank" rel="noopener noreferrer">
