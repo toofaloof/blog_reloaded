@@ -71,6 +71,6 @@ img {
 
 .container {
   max-width: 100%;
-  padding: 0 15%;
+  padding: 0 clamp(1.25rem, 6vw, 15%);
   flex: 1;
 }
