@@ -214,6 +214,7 @@ Processing adjustment for index 35, type 'main_level', unit 'db_change', suggest
           Since there is no real dataset or evaluation for this task yet, we experimented with several models, including Qwen3-Omni-Instruct, which demonstrated the strongest capabilities in analyzing audio snippets. It also has state-of-the-art performance on RUL MuChoMusic (<a href="https://arxiv.org/pdf/2408.01337" target="_blank" rel="noopener noreferrer">Weck et al.</a>), which measures music understanding of LLMs.
           The key thing we found is that the model needs to be provided full context about the mix - what instruments are used, what plugins are on which track, what the settings of each parameter is and how loud each track is. Without that the model struggles to give actionable feedback. 
           We deduce that most of the power of these models still lies in their text understanding capabilities and knowing that how certain instruments and plugins should be set up instead of pure audio understanding.
+          (Edit: Two months after building the first version Kurt, a really cool <a href="https://arxiv.org/pdf/2504.00369" target="_blank" rel="noopener noreferrer">paper</a> (Zang, Yongyi, et al.) has been released essentially noting the same thing and proposing a new benchmark.)
         </p>
         <p>
           In order to reach a better understanding of music and mixing, future models will need to be trained on a corpus of high-quality, uncompressed audio data paired with detailed annotations about mixing techniques and outcomes.
